@@ -1,0 +1,2 @@
+schema: src/main/resources/graphql/employee.graphqls
+documents: src/main/resources/operations/**/*.graphql
