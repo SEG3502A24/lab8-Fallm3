@@ -19,6 +19,8 @@ repositories {
 }
 
 dependencies {
+	implementation("com.graphql-java-kickstart:graphql-spring-boot-starter:12.0.0")
+	implementation("com.graphql-java-kickstart:graphql-java-tools:12.0.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 	implementation("org.springframework.boot:spring-boot-starter-graphql")
 	implementation("org.springframework.boot:spring-boot-starter-security")
