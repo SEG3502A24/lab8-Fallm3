@@ -1,1 +1,41 @@
+type Employee {
+    id: ID!
+    name: String!
+    dateOfBirth: String!
+    city: String!
+    salary: Float!
+    gender: String
+    email: String
+}
 
+# Requêtes GraphQL disponibles
+type Query {
+    getAllEmployees: [Employee!]!
+    getEmployeeById(id: ID!): Employee
+}
+
+# Mutations GraphQL disponibles
+type Mutation {
+    createEmployee(input: CreateEmployeeInput!): Employee!
+    updateEmployee(id: ID!, input: UpdateEmployeeInput!): Employee!
+    deleteEmployee(id: ID!): Boolean!
+}
+
+# Types d'entrée pour les mutations
+input CreateEmployeeInput {
+    name: String!
+    dateOfBirth: String!
+    city: String!
+    salary: Float!
+    gender: String
+    email: String
+}
+
+input UpdateEmployeeInput {
+    name: String
+    dateOfBirth: String
+    city: String
+    salary: Float
+    gender: String
+    email: String
+}
